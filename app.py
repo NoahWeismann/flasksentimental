@@ -12,5 +12,16 @@ def sentimentanalysis():
     if request.method=='POST' and 'input_text' in request.form:
         input_text1 = request.form.get('input_text')
         blob = TextBlob(input_text1)
-        sentiment = blob.sentiment.polarity #-1 to 1
+        #sentiment = blob.sentiment.polarity #-1 to 1
+        #negative to positive
+
+        if blob.sentiment.polarity > 0.0:
+            sentiment = "positive"
+        
+        elif blob.sentiment.polarity < 0.0:
+            sentiment = "negative"
+        
+        else:
+            sentiment = "neutral"
+            
     return render_template('home.html', sentiment = sentiment, input_text1 = input_text1)

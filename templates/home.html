@@ -5,8 +5,7 @@
             <textarea rows = "10" cols = "100" name = "input_text" value ="{{request.form[input_text]}}"></textarea><br>
             <button type="submit" value="submit">Analyze Sentiment</button>
         </form>
-        <p>Sentiment value ranges from -1 to 1 </p>
-        <p>where -1 is bad, 0 is neutral, and 1 is good</p>
+        <p></p>
         {%if sentiment%}
         <p>{{input_text1}}</p>
         <p>Sentiment analysis of text is </p> {{sentiment}}
