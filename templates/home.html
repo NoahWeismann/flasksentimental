@@ -1,4 +1,13 @@
 <html>
+    <style>
+        body{
+            background-color: #414868;
+            color:#9ece6a;
+        }
+        form{
+            background-color: #414868;
+        }
+    </style>
     <body>
         <form actions="/" method = "POST">
             INPUT TEXT HERE
@@ -7,8 +16,8 @@
         </form>
         <p></p>
         {%if sentiment%}
-        <p>{{input_text1}}</p>
-        <p>Sentiment analysis of text is </p> {{sentiment}}
+        <p style="color:#73daca">{{input_text1}}</p>
+        <p style="color:#73daca">Sentiment analysis of text is </p> {{sentiment}}
         {%endif%}
     </body>
 </html>
